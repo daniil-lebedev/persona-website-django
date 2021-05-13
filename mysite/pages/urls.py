@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('main/', views.mainPage)
+	#path for about page which will be the first to load
+    path('', views.mainPage, name='about')
 ]

@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-  {% for blog in blogs %}
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{blog.title}}</h5>
-      <p class="card-text">{{blog.text}}</p>
-      <a href="#" class="card-link">{{blog.link}}</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+  <div class="blog-box">
+    {% for blog in blogs %}
+      <div class="card blog" style="width: 18rem; margin-left: 35px; border-radius: 25px; margin-bottom: 20px">
+        <div class="card-body">
+          <h5 class="card-title">{{blog.title}}</h5>
+          <p class="card-text">{{blog.text}}</p>
+          <a href="#" class="card-link">{{blog.link}}</a>
+        </div>
+      </div>
+    {% endfor %}
   </div>
-  <br>
-  {% endfor %}
 {% endblock  %}

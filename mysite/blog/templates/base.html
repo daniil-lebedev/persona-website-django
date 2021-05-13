@@ -1,5 +1,6 @@
-<!doctype html>
-<html lang="en">
+{% load static %}
+<!DOCTYPE html>
+<html>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,18 +9,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!--Styling for the body. Needs to be changed later-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    
+    <!--Styling for the blogs page-->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog.css' %}">
+
     <title>Daniil's Website</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="opacity: 90%;">
-        <a class="navbar-brand" href="#">Main</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top element">
+        <a class="navbar-brand" href="{% url 'about' %}">About</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">Python</a>
-            <a class="nav-item nav-link" href="#">Something else</a>
+            <a class="nav-item nav-link" href="#">Python🐍</a>
+            <a class="nav-item nav-link" href="#">JS🟡</a>
+            <a class="nav-item nav-link" href="#">HTML and CSS🌊</a>
+            <a class="nav-item nav-link" href="#">Databases🧱</a>
+            <a class="nav-item nav-link" href="{% url 'blogPage' %}">Blogs📚</a>
           </div>
         </div>
     </nav>
